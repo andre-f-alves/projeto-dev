@@ -1,0 +1,29 @@
+@charset 'UTF-8';
+
+header {
+    height: 100px;
+    width: auto;
+    padding: 15px;
+    border: 3px solid black;
+    margin: 10px auto;
+}
+
+header > nav {
+    padding: 3px;
+    border: 3px solid black;
+    margin: 10px auto;
+}
+
+header > h1 {
+    margin: 0px 10px 40px 10px;
+}
+
+section {
+    padding: 5px;
+    border: 3px solid black;
+    margin: 10px auto;
+}
+
+section > article#artigo1 {
+    
+}
