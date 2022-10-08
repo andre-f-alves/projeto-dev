@@ -20,11 +20,11 @@
             <p>
                 Digite as possíveis subsequências:
                 <input type="text" id="subsequence">
-                <input type="button" value="Adiconar à lista" onclick="adicionar()">
+                <input type="button" value="Adiconar à lista" id="adicionar">
             </p>
             <select name="lista" id="lista" size="10"></select>
             <p id="button">
-                <input type="button" value="Analisar" onclick="analisar()">
+                <input type="button" value="Analisar" id="analisar">
             </p>
         </div>
         <div id="result">
@@ -34,6 +34,9 @@
     <footer>
         <p>CodeMan&copy;</p>
     </footer>
-    <script src="main.js"></script>
+
+    <script type="module" src="functions.js"></script>
+    
+    <script type="module" src="main.js"></script>
 </body>
 </html>
