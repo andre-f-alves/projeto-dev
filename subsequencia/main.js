@@ -42,7 +42,7 @@ function adicionar() { // -> Adicona o valor à lista
 
         resultado.innerHTML = '';
 
-    } else { // -> Alerta o erro 
+    } else { // -> Dispara um alerta em caso de erro
         alert('[ERRO] Valor inválido ou já encontrado na lista!');
     };
 
@@ -64,14 +64,22 @@ function analisar() { // -> Analisa se as palavras indicadas são subsequências
     };
 
     if (listaSubsequencia.length) {
-        resultado.innerHTML = `<p>Subsequências da palavra "${principal.value}":</p>`;
 
-        for (let palavra of listaSubsequencia) {
-            resultado.innerHTML += `- ${palavra}<br>`;
-        };
-        
+        let ul = document.createElement('ul');
         let maiorSubsequencia = findLongestWord(listaSubsequencia);
 
+        resultado.innerHTML += `<p>Subsequências da palavra "${principal.value}":</p>`;
+
+        resultado.appendChild(ul);
+        
+        // REQUER MODIFICAÇÃO
+        for (let palavra of listaSubsequencia) {
+            let li = document.createElement('li');
+            
+            li.text = palavra; /* -> O conteúdo deve ser inserido no elemento */ 
+            ul.appendChild(li);
+        };
+        
         resultado.innerHTML += `<p>A subsequência mais longa é ${maiorSubsequencia}.</p>`;
     
     } else {
