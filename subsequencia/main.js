@@ -2,7 +2,9 @@ import {
     findLongestWord, mapString, isSubsequence
 } from './functions.js';
 
-// Área de definição de variáveis globais
+/*
+    Área de definição de variáveis globais
+*/
 
 var principal = document.querySelector('input#principal');
 
@@ -18,20 +20,22 @@ var resultado = document.querySelector('div#result');
 
 var listaDePalavras = [];
 
-// Área de funções
+/* 
+    Área de funções
+*/
 
 const isValid = valor => valor != '' ? true : false; // -> Varifica se o valor não é uma string vazia
 
 const notInList = (item, array) => array.indexOf(item) == -1 ? true : false; // -> Analisa se o valor existe na lista
 
-function adicionar() { // -> Adicona o valor à lista
+function adicionar() { // -> Função para adiconar os valores à lista
     
     if (isValid(principal.value) && isValid(palavra.value) && notInList(palavra.value, listaDePalavras)) { // -> Valida a palavra
 
         let str = String(palavra.value);
         listaDePalavras.push(str); // -> Adiciona a palavra a um array
 
-        let item = document.createElement('option'); // -> Cria o elemento '<option>' na HTML
+        let item = document.createElement('option'); // -> Cria o elemento '<option>' no documento HTML
 
         for (let index in listaDePalavras) { // -> Adiciona o índice do item como valor ao atributo 'value' de '<option>'
             item.value = `item${index}`;
@@ -50,7 +54,7 @@ function adicionar() { // -> Adicona o valor à lista
     palavra.focus(); // -> Foca o cursor no campo
 };
 
-function analisar() { // -> Analisa se as palavras indicadas são subsequências da palavra principal
+function analisar() { // -> Função para analisar se as palavras indicadas são subsequências da palavra principal
 
     let mapaStr = mapString(principal.value); // -> Cria um "mapa" da palavra principal
     let listaSubsequencia = [];
@@ -63,26 +67,27 @@ function analisar() { // -> Analisa se as palavras indicadas são subsequências
         };
     };
 
-    if (listaSubsequencia.length) {
+    if (listaSubsequencia.length) { // -> Verifica se existem palavras dentro do array
 
-        let ul = document.createElement('ul');
-        let maiorSubsequencia = findLongestWord(listaSubsequencia);
+        let ul = document.createElement('ul'); // -> Cria o elemento '<ul>' no documento HTML
+        let maiorSubsequencia = findLongestWord(listaSubsequencia); // -> Procura a palavra mais longa na lista
 
         resultado.innerHTML += `<p>Subsequências da palavra "${principal.value}":</p>`;
 
-        resultado.appendChild(ul);
+        resultado.appendChild(ul); // -> Adiciona o elemento '<ul>' ao elemento '<div>'
         
-        // REQUER MODIFICAÇÃO
-        for (let palavra of listaSubsequencia) {
-            let li = document.createElement('li');
+        for (let palavra of listaSubsequencia) { // -> Percorre a lista de palavras
             
-            li.text = palavra; /* -> O conteúdo deve ser inserido no elemento */ 
-            ul.appendChild(li);
+            let li = document.createElement('li'); // -> Cria um elemento '<li>' no documento HTML
+            let liText = document.createTextNode(palavra); // -> Cria um texto
+
+            li.appendChild(liText); // -> Adiciona o texto ao elemento '<li>'
+            ul.appendChild(li); // -> Adiciona o elemento '<li>' ao elemento '<ul>'
         };
         
         resultado.innerHTML += `<p>A subsequência mais longa é ${maiorSubsequencia}.</p>`;
     
-    } else {
+    } else { // -> Apresenta uma mensagem secundária caso não haja subsequências
         resultado.innerHTML = `<p>Nenhuma das palavras indicadas é uma subsequência de "${principal.value}".</p>`;
     };
 };
