@@ -25,24 +25,53 @@ function findLongestWord(array) {
 
 function mapString(string) {
     /*
-    Cria um "mapa" de uma palavra, ou seja, um objeto com base nas letras e em suas posições na palavra.
+    Cria o "mapa" de uma palavra, ou seja, define um objeto (map) e itera sobre as letras de uma palavra,
+    criando propriedades a partir dessas letras e atribuindo a elas um array com suas respectivas posições
+    (índices) na palavra. Caso a propriedade já exista no objeto, apenas o índice da letra é adicionado
+    ao array.
+
+    Parâmetros
+    =-=-=-=-=-=-=-=
+    string: recebe a palavra cujas letras serão mapeadas.
+
+    Retorno
+    =-=-=-=-=-=-=-=
+    Retorna o "mapa", o objeto que contém as letras da palavra e seus respectivos índices.
     */
     let map = {};
     
     for (let i = 0; i < string.length; i++) {
         let letter = string[i];
 
-        if (map[letter]) { // -> Adiciona o índice da letra na propriedade se esta já existir
+        if (map[letter]) {
             map[letter].push(i);
 
-        } else { // -> Cria a propriedade a partir da letra e atribui um array com seu índice
+        } else {
             map[letter] = [i];
         }
     }
     return map;
 }
 
-function isSubsequence(string, object) { // -> Analisa se a palavra possui letras presentes no objeto
+function isSubsequence(string, object) {
+    /*
+    Realiza uma comparação entre uma palavra e as propriedades de um objeto que contém as letras de uma
+    palavra mapeadas, iterando sobre cada letra da palavra a fim de verificar se ela possui uma propriedade
+    definida no objeto e se seu índice (posição de ocorrência na palavra) é manor ou igual aos índices das
+    letras da palavra mapeada, guardados dentro de um array atribuído como valor às propriedades do objeto.
+
+    Parâmetros
+    =-=-=-=-=-=-=-=
+    string: recebe a palavra cujas letras serão comparadas com as propriedades do objeto.
+    object: recebe o objeto que contém as letras de uma palavra mapeaadas.
+
+    Retorno
+    =-=-=-=-=-=-=-=
+    Retorna 'false' se o objeto não possuir uma propriedade com o mesmo nome da letra a análise os índices das
+    letras forem maiores do que os valores guardados nas propriedades do objeto.
+    Retorna 'true' se o objeto possuir a propriedade e se os índices das letras forem menores ou iguais aos
+    valores guadados na propriedade do objeto.
+    */
     let minIndex = 0;
     
     for (let letter of string) {
