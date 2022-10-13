@@ -1,4 +1,18 @@
-function findLongestWord(array) { // -> Encontra a palavra mais longa
+function findLongestWord(array) {
+    /*
+    Percorre por todo o array em busca da maior palavra contida nele. Para isso, inicialmente uma variável
+    (longestWord) é declarada e uma string vazia é atribuída a ela. Depois, cada palavra dentro do array é
+    comparada com a variável 'longestWord' e, se a palavra for maior do que o valor dentro de 'longestWord',
+    'longestWord' passa a ter o valor da palavra em questão.
+
+    Parâmetros
+    =-=-=-=-=-=-=-=
+    array: recebe o array (lista) com as palavras que serão analisadas.
+
+    Retorno
+    =-=-=-=-=-=-=-=
+    Retorna a variável 'longestWord' com a maior palavra encontrada no array.
+    */
     let longestWord = '';
     
     for (let element of array) {
@@ -9,7 +23,10 @@ function findLongestWord(array) { // -> Encontra a palavra mais longa
     return longestWord;
 }
 
-function mapString(string) { // -> Cria um "mapa" da palavra
+function mapString(string) {
+    /*
+    Cria um "mapa" de uma palavra, ou seja, um objeto com base nas letras e em suas posições na palavra.
+    */
     let map = {};
     
     for (let i = 0; i < string.length; i++) {
