@@ -82,7 +82,6 @@ function isSubsequence(string, object) {
             if (minIndex == false) {
                 return false;
             }
-        
         } else {
             return false;
         }
@@ -91,6 +90,22 @@ function isSubsequence(string, object) {
 }
 
 function findNextIndex(array, minIndex) {
+    /* 
+    Atua como função secundária para 'isSubsequence()'.
+
+    Itera sobre os elementos de um array, comparando-o com um índice mínimo definido a fim de verificar
+    se este é menor ou igual ao elemento do array.
+
+    Parâmetros
+    =-=-=-=-=-=-=-=
+    array: recebe um array de índices.
+    minIndex: recebe o índice mínimo para a comparação.
+
+    Retorno
+    =-=-=-=-=-=-=-=
+    Retorna o índice do array incrementado caso este seja maior ou igual ao índice mínimo. Caso contrário,
+    'false é retornado'.
+    */
     for (let index of array) {
         
         if (index >= minIndex) {
