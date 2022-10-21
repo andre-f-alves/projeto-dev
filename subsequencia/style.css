@@ -17,7 +17,7 @@ h1 {
 main {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 3px 3px 10px #00a8a2a4;
+    box-shadow: 3px 3px 10px #0000002d;
     width: 600px;
     padding: 10px;
     margin: auto;
@@ -29,7 +29,6 @@ select#lista {
 
 footer {
     text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
     font-style: italic;
     font-size: 0.8em;
 }

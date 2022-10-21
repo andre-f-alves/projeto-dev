@@ -11,32 +11,35 @@
     <header>
         <h1>Teste de Subsequência</h1>
     </header>
+    
     <main>
+        <!-- Parte principal - formulário -->
         <div>
-            <p>
-                Digite a palavra principal:
-                <input type="text" id="principal" style="width: 250px;">
-            </p>
-            <p>
-                Digite as possíveis subsequências:
-                <input type="text" id="subsequence">
-                <input type="button" value="Adiconar à lista" id="adicionar">
-            </p>
-            <select name="lista" id="lista" size="10"></select>
-            <p id="button">
-                <input type="button" value="Analisar" id="analisar">
-            </p>
+            <form autocomplete="off">
+                <p>
+                    <label for="principal">Digite a palavra principal:</label> <input type="text" name="principal" id="principal">
+                </p>
+                <p>
+                    <label for="subsequence">Digite as possíveis subsequências:</label> <input type="text" name="subsequence" id="subsequence">
+                    <input type="button" value="Adiconar à lista" id="adicionar">
+                </p>
+                <select name="lista" id="lista" size="10"></select>
+                <p id="button">
+                    <input type="button" value="Analisar" id="analisar">
+                </p>
+            </form>
         </div>
+        <!-- Parte secundária - resultado -->
         <div id="result">
 
         </div>
     </main>
+
     <footer>
         <p>CodeMan&copy;</p>
     </footer>
 
     <script type="module" src="functions.js"></script>
-    
     <script type="module" src="main.js"></script>
 </body>
 </html>
