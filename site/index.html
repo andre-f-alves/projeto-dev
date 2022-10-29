@@ -8,51 +8,61 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Título Principal do Site</h1>
-        <nav>
-            Área de Navegação
-        </nav>
-    </header>
-    <main>
-        <section>
-            <h1>
-                Seção 1
-            </h1>
-            <article id="artigo1">
-                <h2>
-                    Artigo 1
-                </h2>
+    <form action="#">
+        <fieldset id="principal">
+            <legend id="legenda">Cadastro do Desenvolvedor</legend>
+            
+            <fieldset>
+                <legend class="dados">Dados Pessoais</legend>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati in omnis quos ullam sapiente provident ad. Culpa facere esse fuga sunt neque ipsa, eos dolores aspernatur est optio quis vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero sapiente vel impedit cum ad excepturi dignissimos, recusandae quibusdam deleniti corporis laborum consequatur culpa saepe veniam alias incidunt laudantium quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia, saepe deleniti eaque commodi quibusdam ullam, laborum eos ad voluptate numquam error ipsam impedit vero repellendus. Fugit aspernatur odio mollitia.
+                    <label for="nome">Nome: </label>
+                    <input type="text" name="nome" id="nome" required>
+                    <label for="sobrenome">Sobrenome: </label>
+                    <input type="text" name="sobrenome" id="sobrenome" required>
+                    <label for="email">E-mail: </label>
+                    <input type="email" name="email" id="email" required>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend class="dados">Dados Profissionais</legend>
+                <p>
+                    Área de atuação:
+                    <input type="radio" name="area" id="front-end"><label for="front-end"> Front-End</label>
+                    <input type="radio" name="area" id="back-end"><label for="back-end"> Back-End</label>
+                    <input type="radio" name="area" id="fullstack"><label for="fullstack"> FullStack</label>
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati in omnis quos ullam sapiente provident ad. Culpa facere esse fuga sunt neque ipsa, eos dolores aspernatur est optio quis vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero sapiente vel impedit cum ad excepturi dignissimos, recusandae quibusdam deleniti corporis laborum consequatur culpa saepe veniam alias incidunt laudantium quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia, saepe deleniti eaque commodi quibusdam ullam, laborum eos ad voluptate numquam error ipsam impedit vero repellendus. Fugit aspernatur odio mollitia.
+                    Linguagens utilizadas:
+                    <input type="checkbox" name="html" id="html"><label for="html"> HTML</label>
+                    <input type="checkbox" name="css" id="css"><label for="css"> CSS</label>
+                    <input type="checkbox" name="js" id="js"><label for="js">JavaScript</label>
+                    <input type="checkbox" name="ts" id="ts"><label for="ts"> TypeScript</label>
+                    <input type="checkbox" name="python" id="python"><label for="python"> Python</label>
+                    <input type="checkbox" name="c-sharp" id="c-sharp"><label for="c-sharp"> C-Sharp</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend class="dados">Experiência</legend>
+                <p>
+                    Nível de senioridade:
+                    <select name="senioridade" id="senioridade" size="5" class="caixa">
+                        <option value="option0" disabled>Selecione uma das opções</option>
+                        <option value="option1">Júnior</option>
+                        <option value="option2">Pleno</option>
+                        <option value="option3">Sênior</option>
+                    </select>
                 </p>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati in omnis quos ullam sapiente provident ad. Culpa facere esse fuga sunt neque ipsa, eos dolores aspernatur est optio quis vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero sapiente vel impedit cum ad excepturi dignissimos, recusandae quibusdam deleniti corporis laborum consequatur culpa saepe veniam alias incidunt laudantium quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia, saepe deleniti eaque commodi quibusdam ullam, laborum eos ad voluptate numquam error ipsam impedit vero repellendus. Fugit aspernatur odio mollitia.
+                    Conte um pouco de sua experiência:
+                    <textarea name="experiencia" id="experiencia" cols="50" rows="10" class="caixa"></textarea>
                 </p>
-            </article>
-            <article id="artigo2">
-                <h2>
-                    Artigo 2
-                </h2>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati in omnis quos ullam sapiente provident ad. Culpa facere esse fuga sunt neque ipsa, eos dolores aspernatur est optio quis vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero sapiente vel impedit cum ad excepturi dignissimos, recusandae quibusdam deleniti corporis laborum consequatur culpa saepe veniam alias incidunt laudantium quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia, saepe deleniti eaque commodi quibusdam ullam, laborum eos ad voluptate numquam error ipsam impedit vero repellendus. Fugit aspernatur odio mollitia.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati in omnis quos ullam sapiente provident ad. Culpa facere esse fuga sunt neque ipsa, eos dolores aspernatur est optio quis vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero sapiente vel impedit cum ad excepturi dignissimos, recusandae quibusdam deleniti corporis laborum consequatur culpa saepe veniam alias incidunt laudantium quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia, saepe deleniti eaque commodi quibusdam ullam, laborum eos ad voluptate numquam error ipsam impedit vero repellendus. Fugit aspernatur odio mollitia.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Obcaecati in omnis quos ullam sapiente provident ad. Culpa facere esse fuga sunt neque ipsa, eos dolores aspernatur est optio quis vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque vero sapiente vel impedit cum ad excepturi dignissimos, recusandae quibusdam deleniti corporis laborum consequatur culpa saepe veniam alias incidunt laudantium quo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor officia, saepe deleniti eaque commodi quibusdam ullam, laborum eos ad voluptate numquam error ipsam impedit vero repellendus. Fugit aspernatur odio mollitia.
-                </p>
-                <aside>Complemento</aside>
-            </article>
-            <aside>Complemento</aside>
-        </section>
-    </main>
-    <footer>
-        Rodapé do Site
-    </footer>
+            </fieldset>
+            <p>
+                <input type="submit" value="Cadastrar" id="botao">
+            </p>
+        </fieldset>
+    </form>
 </body>
 </html>
