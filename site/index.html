@@ -8,12 +8,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="#">
+    <form action="cadastro.php" method="post">
         <fieldset id="principal">
-            <legend id="legenda">Cadastro do Desenvolvedor</legend>
+
+            <legend id="titulo">Cadastro do Desenvolvedor</legend>
             
-            <fieldset>
-                <legend class="dados">Dados Pessoais</legend>
+            <fieldset class="dados">
+                <legend>Dados Pessoais</legend>
                 <p>
                     <label for="nome">Nome: </label>
                     <input type="text" name="nome" id="nome" required>
@@ -24,39 +25,22 @@
                 </p>
             </fieldset>
 
-            <fieldset>
-                <legend class="dados">Dados Profissionais</legend>
+            <fieldset class="dados">
+                <legend>Dados Profissionais</legend>
                 <p>
-                    Área de atuação:
-                    <input type="radio" name="area" id="front-end"><label for="front-end"> Front-End</label>
-                    <input type="radio" name="area" id="back-end"><label for="back-end"> Back-End</label>
+                    Área de atuação:<br>
+                    <input type="radio" name="area" id="front-end"><label for="front-end"> Front-End</label><br>
+                    <input type="radio" name="area" id="back-end"><label for="back-end"> Back-End</label><br>
                     <input type="radio" name="area" id="fullstack"><label for="fullstack"> FullStack</label>
                 </p>
                 <p>
-                    Linguagens utilizadas:
-                    <input type="checkbox" name="html" id="html"><label for="html"> HTML</label>
-                    <input type="checkbox" name="css" id="css"><label for="css"> CSS</label>
-                    <input type="checkbox" name="js" id="js"><label for="js">JavaScript</label>
-                    <input type="checkbox" name="ts" id="ts"><label for="ts"> TypeScript</label>
-                    <input type="checkbox" name="python" id="python"><label for="python"> Python</label>
+                    Linguagens utilizadas:<br>
+                    <input type="checkbox" name="html" id="html"><label for="html"> HTML</label><br>
+                    <input type="checkbox" name="css" id="css"><label for="css"> CSS</label><br>
+                    <input type="checkbox" name="js" id="js"><label for="js"> JavaScript</label><br>
+                    <input type="checkbox" name="ts" id="ts"><label for="ts"> TypeScript</label><br>
+                    <input type="checkbox" name="python" id="python"><label for="python"> Python</label><br>
                     <input type="checkbox" name="c-sharp" id="c-sharp"><label for="c-sharp"> C-Sharp</label>
-                </p>
-            </fieldset>
-
-            <fieldset>
-                <legend class="dados">Experiência</legend>
-                <p>
-                    Nível de senioridade:
-                    <select name="senioridade" id="senioridade" size="5" class="caixa">
-                        <option value="option0" disabled>Selecione uma das opções</option>
-                        <option value="option1">Júnior</option>
-                        <option value="option2">Pleno</option>
-                        <option value="option3">Sênior</option>
-                    </select>
-                </p>
-                <p>
-                    Conte um pouco de sua experiência:
-                    <textarea name="experiencia" id="experiencia" cols="50" rows="10" class="caixa"></textarea>
                 </p>
             </fieldset>
             <p>
