@@ -4,47 +4,76 @@
     --fonte-padrão: Arial, Calibri, Helvetica, sans-serif;
     --cor1: #141414;
     --cor2: #0059ff;
-}
-
-* {
-    padding: 0px;
-    margin: 0px;
+    --cor3: #0045c5;
+    --cor4: #5600c7;
 }
 
 body {
-    height: 100vh;
-    background-color: var(--cor1);
-    font-family: var(--fonte-padrão);
+    background-image: linear-gradient(45deg, var(--cor2), var(--cor1));
+    background-attachment: fixed;
+}
+
+form {
+    position: absolute;
+    background-color: #0000008f;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
+    font-family: var(--fonte-padrão);
+    padding: 20px;
+    border-radius: 10px;
 }
 
-fieldset#principal {
-    position: relative;
-    padding: 10px;
-    padding-bottom: 50px;
+fieldset {
+    padding: 20px;
     border: 2px solid var(--cor2);
-    margin: 20px;
 }
 
-legend#titulo {
+legend {
     background-color: var(--cor2);
+    padding: 8px;
+    border-radius: 5px;
     text-align: center;
     font-weight: bold;
-    color: white;
-    padding: 10px;
-    border: 5px solid var(--cor1);
-    border-radius: 10px;
-    
+    font-size: 1.1em;
 }
 
-fieldset.dados {
-    padding: 8px;
-    margin: 15px 0px;
+.caixa-input {
+    position: relative;
+    margin-top: 30px;
+}
+
+.input {
+    background: none;
+    border: none;
+    outline: none;
+    padding-top: 5px;
+    border-bottom: 1px solid white;
+    width: 100%;
+    color: white;
+}
+
+.input-label {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    pointer-events: .5s;
+}
+
+.input:focus ~ .input-label, .input:valid ~ .input-label {
+    transition: .5s;
+    font-size: 0.7em;
+    top: -15px;
+    color: var(--cor2);
 }
 
 #botao {
-    display: block;
+    background-image: linear-gradient(90deg, var(--cor3), var(--cor4));
+    color: white;
+    width: 100%;
     padding: 10px;
-    margin: auto;
-    margin-top: 50px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
 }

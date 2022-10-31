@@ -8,44 +8,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="cadastro.php" method="post">
-        <fieldset id="principal">
-
-            <legend id="titulo">Cadastro do Desenvolvedor</legend>
+    <form action="#" method="post">
+        <fieldset>
+            <legend>Cadastro do Desenvolvedor</legend>
             
-            <fieldset class="dados">
-                <legend>Dados Pessoais</legend>
-                <p>
-                    <label for="nome">Nome: </label>
-                    <input type="text" name="nome" id="nome" required>
-                    <label for="sobrenome">Sobrenome: </label>
-                    <input type="text" name="sobrenome" id="sobrenome" required>
-                    <label for="email">E-mail: </label>
-                    <input type="email" name="email" id="email" required>
+            <div>
+                <p class="caixa-input">
+                    <input type="text" name="nome" id="nome" required class="input">
+                    <label for="nome" class="input-label">Nome*</label>
                 </p>
-            </fieldset>
+                <p class="caixa-input">
+                    <input type="text" name="sobrenome" id="sobrenome" required class="input">
+                    <label for="sobrenome" class="input-label">Sobrenome*</label>
+                </p>
+                <p class="caixa-input">
+                    <input type="email" name="email" id="email" required class="input">
+                    <label for="email" class="input-label">E-mail*</label>
+                </p>
+            </div>
 
-            <fieldset class="dados">
-                <legend>Dados Profissionais</legend>
-                <p>
-                    Área de atuação:<br>
-                    <input type="radio" name="area" id="front-end"><label for="front-end"> Front-End</label><br>
-                    <input type="radio" name="area" id="back-end"><label for="back-end"> Back-End</label><br>
-                    <input type="radio" name="area" id="fullstack"><label for="fullstack"> FullStack</label>
-                </p>
-                <p>
-                    Linguagens utilizadas:<br>
-                    <input type="checkbox" name="html" id="html"><label for="html"> HTML</label><br>
-                    <input type="checkbox" name="css" id="css"><label for="css"> CSS</label><br>
-                    <input type="checkbox" name="js" id="js"><label for="js"> JavaScript</label><br>
-                    <input type="checkbox" name="ts" id="ts"><label for="ts"> TypeScript</label><br>
-                    <input type="checkbox" name="python" id="python"><label for="python"> Python</label><br>
-                    <input type="checkbox" name="c-sharp" id="c-sharp"><label for="c-sharp"> C-Sharp</label>
-                </p>
-            </fieldset>
-            <p>
-                <input type="submit" value="Cadastrar" id="botao">
-            </p>
+            <div>
+                <p>Área de atuação:</p>
+                <input type="radio" name="area" id="frontend" checked>
+                <label for="frontend"> Front-End</label><br>
+                <input type="radio" name="area" id="backend">
+                <label for="backend">Back-End</label><br>
+                <input type="radio" name="area" id="fullstack">
+                <label for="fullstack">FullStack</label>
+            </div>
+
+            <div>
+                <p>Linguagens utilizadas:</p>
+                <input type="checkbox" name="html" id="html">
+                <label for="html">HTML</label><br>
+                <input type="checkbox" name="css" id="css">
+                <label for="css">CSS</label><br>
+                <input type="checkbox" name="js" id="js">
+                <label for="js">JavaScript</label><br>
+                <input type="checkbox" name="py" id="py">
+                <label for="py">Python</label><br>
+                <input type="checkbox" name="csharp" id="csharp">
+                <label for="csharp">C-Sharp</label>
+            </div>
+
+            <input type="submit" value="Enviar" id="botao">
         </fieldset>
     </form>
 </body>
