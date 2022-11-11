@@ -6,6 +6,8 @@
     --cor2: #0059ff;
     --cor3: #0045c5;
     --cor4: #5600c7;
+    --cor5: #2d62c4;
+    --cor6: #783ec4;
 }
 
 body {
@@ -59,6 +61,8 @@ legend {
     top: 0px;
     left: 0px;
     pointer-events: .5s;
+    padding: 3px;
+    cursor: auto;
 }
 
 .input:focus ~ .input-label, .input:valid ~ .input-label {
@@ -74,6 +78,11 @@ legend {
     width: 100%;
     padding: 10px;
     border: none;
-    border-radius: 5px;
     margin-top: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#botao:hover {
+    background-image: linear-gradient(90deg, var(--cor5), var(--cor6));
 }
