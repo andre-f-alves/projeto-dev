@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do usuário</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="styles/estilo.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Miles Airlines
+        </h1>
+        <p>
+            Junto com você aonde estiver.
+        </p>
+    </header>
+    <main>
+        <div id="formulario">
+            <h2>
+                Login
+            </h2>
+            <p>
+                Faça o login para ver seus planos, pacotes de viagem e milhas acumuladas.
+            </p>
+            <form action="login.php" method="post">
+                <div class="campo">
+                    <label for="email"><span class="material-icons">person</span></label><input type="email" name="email" id="email">
+                </div>
+                <div class="campo">
+                    <label for="senha"><span class="material-icons">vpn_key</span></label><input type="password" name="senha" id="senha">
+                </div>
+                <input type="submit" value="Entrar">
+                <a href="#">Esqueci minha senha</a>
+            </form>
+        </div>
+    </main>
+</body>
+</html>
